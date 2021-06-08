@@ -14,6 +14,41 @@ body {
   height: 100%;
 }
 
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.3rem;
+  color: #ce6438;
+  line-height: 1.125;
+  margin: 1rem;
+  letter-spacing: 0.4rem;
+  text-align: left;
+}
+
+h2 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.3rem;
+  color: #ce6438;
+  line-height: 1.125;
+  margin: 1rem;
+  letter-spacing: 0.4rem;
+  text-align: left;
+}
+
+h4 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 4rem;
+  color: #c56198;
+  line-height: 1.125;
+  margin: 1rem;
+  letter-spacing: 0.4rem;
+  text-align: right;
+}
 /* MENU KNAP FUNKTIONER */
 
 .hidden {
@@ -21,10 +56,15 @@ body {
   transform: translateX(-100%);
 }
 
+.logo {
+  opacity: 0;
+}
+
 #menuknap {
   display: inline-block;
   color: #ce6438;
-  font-family: "Pacifico", cursive;
+  font-family: "Orbitron", sans-serif;
+  cursor: pointer;
 }
 
 #menu {
@@ -59,6 +99,28 @@ li a {
   }
   #menu li {
     display: inline-block;
+  }
+  header {
+    position: sticky;
+    top: 0;
+    /* padding: 0.1rem 0.1rem; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.575);
+    z-index: 100;
+  }
+  header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    gap: 0.6rem;
+  }
+
+  header .logo {
+    width: 7%;
   }
 }
 
