@@ -24,6 +24,8 @@ a {
   font-family: “Saira”, sans-serif;
   font-size: 1rem;
   color: #d880a8;
+  margin-left: 1rem;
+  text-decoration: none;
 }
 /* "OVERSKRIFTER" */
 
@@ -40,19 +42,6 @@ a {
   grid-column: 1;
   grid-row: 1;
 }
-
-/* h1 {
-  font-family: "Orbitron", sans-serif;
-  font-size: 2.3rem;
-  margin-block-start: 8.67rem;
-  color: #ce6438;
-  line-height: 1.125;
-  margin-bottom: 1rem;
-  
-  letter-spacing: 0.4rem;
-  text-align: left;
-} */
-
 #forsideH2 {
   font-family: "Orbitron", sans-serif;
   font-size: 1.3rem;
@@ -66,15 +55,26 @@ a {
   grid-row: 1;
 }
 
-/* h2 {
+#generalH1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.3rem;
+  margin-block-start: 8.67rem;
+  color: #ce6438;
+  line-height: 1.125;
+  margin-left: 1rem;
+  letter-spacing: 0.4rem;
+  text-align: left;
+}
+
+#generalH2 {
   font-family: "Orbitron", sans-serif;
   font-size: 1.3rem;
   color: #ce6438;
   line-height: 1.125;
-  margin: 1rem;
+  margin-left: 1rem;
   letter-spacing: 0.4rem;
   text-align: left;
-} */
+}
 
 h4 {
   display: grid;
@@ -176,6 +176,8 @@ li a {
   grid-gap: 0.6rem;
   padding-left: 0.1rem;
   padding-left: 0.1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .grid_containerweb > div {
@@ -223,13 +225,15 @@ li a {
     width: 7%;
   }
 
-  /* GRUNDLÆGGENDE HTML WEBSITE GRID */
+  /* GRUNDLÆGGENDE HTML WEBSITE GRID STORSKÆRM */
 
   .grid_containerweb {
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 0.6rem;
     padding: 0.1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   .grid_containerweb > div {
