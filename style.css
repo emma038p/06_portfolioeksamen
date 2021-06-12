@@ -101,6 +101,7 @@ h4 {
   }
 }
 
+/* tekst mobil */
 p {
   max-width: 90rem;
   font-family: “Saira”, sans-serif;
@@ -110,7 +111,9 @@ p {
   padding-left: 1rem;
   padding-right: 1rem;
   background: #d8ccdf;
-  color: #c56198;
+  color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0.1rem 0.1rem rgba(240, 240, 239, 0.959);
 }
 
 /* sektioner */
@@ -159,6 +162,7 @@ ul {
   padding: 0;
   width: 2rem;
   height: 30rem;
+  background-color: hsla(322, 15%, 80%, 0.5);
 }
 
 li a {
