@@ -18,6 +18,7 @@ img {
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 0.5rem;
 }
 
 a {
@@ -101,7 +102,7 @@ h4 {
   }
 }
 
-/* tekst mobil */
+/* brødtekst tekst mobil */
 p {
   max-width: 90rem;
   font-family: “Saira”, sans-serif;
@@ -131,6 +132,7 @@ p {
   place-content: start;
   margin-top: 1rem;
 }
+
 /* MENU KNAP FUNKTIONER */
 
 .hidden {
@@ -161,7 +163,7 @@ ul {
   margin: 0;
   padding: 0;
   width: 2rem;
-  height: 30rem;
+  height: 0rem;
   background-color: hsla(322, 15%, 80%, 0.5);
 }
 
@@ -174,6 +176,7 @@ li a {
 }
 
 /* GRUNDLÆGGENDE HTML GRID MOBILE*/
+
 .grid_containerweb {
   display: grid;
   grid-template-columns: auto;
@@ -187,6 +190,184 @@ li a {
 .grid_containerweb > div {
   text-align: center;
   padding: 0.1rem 0;
+}
+
+/* GRUNDLÆGGENDE UX GRID MOBILE*/
+
+.grid_containerUX1 {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 0.6rem;
+  padding-left: 0.1rem;
+  padding-left: 0.1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.grid_containerUX1 > div {
+  text-align: center;
+  padding: 0.1rem 0;
+}
+
+.grid_containerUX2 {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 0.6rem;
+  padding-left: 0.1rem;
+  padding-left: 0.1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.grid_containerUX2 > div {
+  text-align: center;
+  padding: 0.1rem 0;
+}
+
+.grid_containerUX3 {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 0.6rem;
+  padding-left: 0.1rem;
+  padding-left: 0.1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.grid_containerUX3 > div {
+  text-align: center;
+  padding: 0.1rem 0;
+}
+
+/* GRUNDLÆGGENDE Animation GRID MOBILE*/
+.grid_containerANI1 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 0.6rem;
+    padding: 0.1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .grid_containerANI1 > div {
+    text-align: center;
+    padding: 20px 0;
+  }
+
+@media (min-width: 650px) {
+  /* GRUNDLÆGGENDE HTML WEBSITE GRID STORSKÆRM */
+  .grid_containerweb {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 0.6rem;
+    padding: 0.1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .grid_containerweb > div {
+    text-align: center;
+    padding: 20px 0;
+  }
+
+/* GRUNDLÆGGENDE UX WEBSITE GRID STORSKÆRM */
+ .grid_containerUX1 {
+    display: grid;
+    grid-template-columns: repeat(6, fr);
+    grid-template-rows:repeat(2, fr):
+    grid-gap: 0.6rem;
+    /* padding: 0.1rem;
+    margin-left: 1rem;
+    margin-right: 1rem; */
+  }
+
+  .grid_containerUX1 > div {
+    text-align: center;
+    padding: 20px 0;
+  }
+  .grid_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Grid der er lavet specilet til 1 sektion i UX design med 5 billeder */
+.grid_item1 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+.grid_item2 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+.grid_item3 {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+.grid_item4 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+.grid_item5{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+/* De andre sektioner i UX design storskærm */
+  .grid_containerUX2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 0.6rem;
+    padding: 0.1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .grid_containerUX2 > div {
+    text-align: center;
+    padding: 20px 0;
+  }
+  .grid_containerUX3 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 0.6rem;
+    padding: 0.1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .grid_containerUX3 > div {
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  /* Animations side grid stor skærm  */
+
+  .grid_containerANI1 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 0.6rem;
+    padding: 0.1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .grid_containerANI1 > div {
+    text-align: center;
+    padding: 20px 0;
+  }
+
+
 }
 
 @media (min-width: 900px) {
@@ -228,24 +409,6 @@ li a {
   header .logo {
     width: 7%;
   }
-
-  /* GRUNDLÆGGENDE HTML WEBSITE GRID STORSKÆRM */
-
-  .grid_containerweb {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 0.6rem;
-    padding: 0.1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-
-  .grid_containerweb > div {
-    text-align: center;
-    padding: 20px 0;
-  }
-}
-
 ul {
   margin: 0;
   padding: 0;
