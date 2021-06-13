@@ -80,7 +80,7 @@ a {
 h4 {
   display: grid;
   font-family: "Orbitron", sans-serif;
-  font-size: 2.3rem;
+  font-size: 3.9rem;
   color: #c56198;
   line-height: 1.125;
   margin-right: 2rem;
@@ -92,14 +92,71 @@ h4 {
   grid-row: 3;
 }
 
+/* knap til cv */
+
+#tryk {
+    position:absolute;
+    width: 23vw;
+    height: 22vw;
+    background-image: url(billeder/CV_knap.svg);
+    background-size: cover;
+    left: 10vw;
+    top: 56vw;
+    cursor: pointer;
+    font-family: "amboy-black", sans-serif;
+}
+
+
 /* H1 og H2 color skifter ved stor skærm */
 @media (min-width: 850px) {
-  #forsideH1 {
-    color: #ce6438;
-  }
-  #forsideH2 {
-    color: #ce6438;
-  }
+ #forsideH1 {
+  color: #ce6438;
+}
+#forsideH2 {
+ color: #ce6438;
+}
+}
+
+/* overskrifter til CV siden */
+
+#CVH2 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1rem;
+  color: #e37a74;
+  line-height: 1.125;
+  margin-left: 1rem;
+  letter-spacing: 0.4rem;
+  text-align: left;
+  margin-top: 1rem;
+}
+#CVH3 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.7rem;
+  color: #eba29b;
+  line-height: 1.125;
+  margin-left: 1rem;
+  letter-spacing: 0.4rem;
+  text-align: left;
+  margin-top: 1rem;
+}
+
+#CVH4 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.7rem;
+  color: #eba29b;
+  line-height: 1.125;
+  margin-left: 1rem;
+  letter-spacing: 0.4rem;
+  text-align: left;
+}
+
+hr{
+  color: #ce6438;
+  border: 0;
+    height: 0;
+    box-shadow: 0 0 10px 1px rgb(230, 122, 122);
+    margin-top: 2rem;
+    margin-bottom: 4rem;
 }
 
 /* brødtekst tekst mobil */
@@ -107,6 +164,7 @@ p {
   max-width: 90rem;
   font-family: “Saira”, sans-serif;
   font-size: 1rem;
+  line-height: 1.2rem;
   text-align: left;
   margin: 1rem;
   padding-left: 1rem;
@@ -114,12 +172,27 @@ p {
   background: #d8ccdf;
   color: white;
   border-radius: 0.5rem;
-  box-shadow: 0.1rem 0.1rem rgba(240, 240, 239, 0.959);
+  box-shadow: 0.1rem 0.1rem rgba(143, 143, 141, 0.26);
 }
 
 /* sektioner */
 
 #first_section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 100%;
+  height: 100vh;
+  background-image: url(billeder/splashbillede.png);
+  background-size: cover;
+  background-position: 77% 0%;
+  background-repeat: no-repeat;
+  place-content: start;
+  margin-top: 1rem;
+}
+
+/* første sektion i CV */
+#first_section_cv {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -339,10 +412,15 @@ li a {
   padding: 0.1rem 0;
 }
 
-
-
-
 @media (min-width: 650px) {
+
+   #forsideH1 {
+  font-size: 2.9rem;
+}
+#forsideH2 {
+  font-size: 2rem;
+}
+
   /* GRUNDLÆGGENDE HTML WEBSITE GRID STORSKÆRM */
   .grid_containerweb {
     display: grid;
@@ -467,7 +545,7 @@ li a {
     text-align: center;
     padding: 20px 0;
   }
-}
+
 
 .grid_containerANI5 {
   display: grid;
@@ -514,12 +592,26 @@ li a {
   padding: 0.1rem 0;
 }
 
+/* CV design storskærm */
+.IDEAL, .REIREI, .TUI, .USAtours, .havecenter, .floradanica, .KEA, .NielsBrock{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.6rem;
+  padding-left: 0.1rem;
+  padding-left: 0.1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
 
-
+.IDEAL, .REIREI, .TUI, .USAtours, .havecenter, .floradanica, .KEA, .NielsBrock > div {
+  text-align: center;
+  padding: 0.1rem 0;
+}
+}
 
 /* Menulinje der skifter ved større skærm */
 
-@media (min-width: 900px) {
+@media (min-width: 950px) {
   #menuknap {
     display: none;
   }
@@ -573,4 +665,46 @@ li a {
   padding: 8px 16px;
   text-decoration: none;
   font-family: "Saira", sans-serif;
+}
+}
+
+@media (min-width: 1100px) {
+/* h1, h2, h4 der er på forside og cv ved stor skærm */
+  #forsideH1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 4rem;
+  align-self: center;
+  line-height: 1.125;
+  margin-left: 1rem;
+  letter-spacing: 0.4rem;
+  text-align: left;
+  grid-column: 1;
+  grid-row: 1;
+}
+#forsideH2 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.5rem;
+  align-self: end;
+  line-height: 1.125;
+  margin: 1rem;
+  letter-spacing: 0.4rem;
+  text-align: left;
+  grid-column: 1;
+  grid-row: 1;
+}
+  
+  h4 {
+    display: grid;
+    font-family: "Orbitron", sans-serif;
+    font-size: 5.3rem;
+    color: #c56198;
+    line-height: 1.125;
+    margin-right: 4rem;
+    letter-spacing: 0.4rem;
+    text-align: right;
+    bottom: -7rem;
+    position: relative;
+    grid-column: 2;
+    grid-row: 3;
+}
 }
