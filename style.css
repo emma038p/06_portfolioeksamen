@@ -207,6 +207,9 @@ hr {
   color: white;
   border-radius: 0.5rem;
   box-shadow: 3px 3px 7px #c9cccf, -3px -3px 7px #ffffff;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .roledescript {
@@ -235,6 +238,9 @@ hr {
   color: white;
   border-radius: 0.5rem;
   box-shadow: 3px 3px 7px #c9cccf, -3px -3px 7px #ffffff;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* sektioner */
@@ -300,8 +306,8 @@ hr {
 ul {
   margin: 0;
   padding: 0;
-  width: 2rem;
-  height: 0rem;
+  width: auto;
+  height: auto;
 }
 
 li a {
@@ -819,7 +825,7 @@ li a {
   #menu.hidden {
     transform: translateX(0);
     opacity: 1;
-    height: 3rem;
+    height: auto;
     background-color: hsla(323, 16%, 80%, 0.945);
   }
   #menu li {
@@ -831,8 +837,8 @@ li a {
     transition: transform 0.7s;
     transform-origin: top left;
     background-color: hsla(323, 16%, 80%, 0.945);
-    position: ;
-    z-index: ;
+    height: auto;
+    top: 0;
   }
 
   .logo {
@@ -865,8 +871,7 @@ li a {
     padding: 0;
     height: 2rem;
     width: 18rem;
-    /* background-color: #d3c3cd;
-  box-shadow: #d880a8; */
+    top: 0;
   }
 
   li a {
