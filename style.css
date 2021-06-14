@@ -5,20 +5,46 @@
 }
 
 body {
-  background: white;
+  background: #f3edf7;
 }
 
 html,
 body {
   margin: 0;
-  height: 100%;
+  /* height: 100%; */
 }
 
 img {
   display: block;
   width: 100%;
   height: auto;
+  overflow: hidden;
   border-radius: 0.5rem;
+}
+
+/* HEADER VIDEO */
+.videobg {
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+  position: relative; /* requires for to position video properly */
+  z-index: -100;
+}
+
+video {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+/* HEADER VIEDEO STOP */
+
+/* HTML LINK VIDEO */
+img,
+video {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 a {
@@ -27,6 +53,9 @@ a {
   color: #d880a8;
   margin-left: 1rem;
   text-decoration: none;
+  text-align: center;
+  margin-top: 0.6rem;
+  margin-right: 0.6rem;
 }
 /* "OVERSKRIFTER" */
 
@@ -46,6 +75,7 @@ a {
 #forsideH2 {
   font-family: "Orbitron", sans-serif;
   font-size: 1.3rem;
+  margin-top: 1rem;
   align-self: end;
   color: #ffffff;
   line-height: 1.125;
@@ -80,10 +110,10 @@ a {
 h4 {
   display: grid;
   font-family: "Orbitron", sans-serif;
-  font-size: 3.9rem;
+  font-size: 2.5rem;
   color: #c56198;
   line-height: 1.125;
-  margin-right: 2rem;
+  right: 3rem;
   letter-spacing: 0.4rem;
   text-align: right;
   bottom: -7rem;
@@ -93,28 +123,31 @@ h4 {
 }
 
 /* knap til cv */
-
-#tryk {
-    position:absolute;
-    width: 23vw;
-    height: 22vw;
-    background-image: url(billeder/CV_knap.svg);
-    background-size: cover;
-    left: 10vw;
-    top: 56vw;
-    cursor: pointer;
-    font-family: "amboy-black", sans-serif;
+.btn_wrapper {
+  background-color: #ede3f3bd;
+  display: grid;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 7px #c9cccf, -3px -3px 7px #ffffff;
+  width: 150px;
+  height: 40px;
+  grid-column: 1;
+  grid-row: 3;
+  margin-left: 130px;
+  margin-bottom: 20px;
+  /* position: relative; */
 }
-
 
 /* H1 og H2 color skifter ved stor skærm */
 @media (min-width: 850px) {
- #forsideH1 {
-  color: #ce6438;
-}
-#forsideH2 {
- color: #ce6438;
-}
+  #forsideH1 {
+    color: #ce6438;
+  }
+  #forsideH2 {
+    color: #ce6438;
+    margin-top: 1rem;
+  }
 }
 
 /* overskrifter til CV siden */
@@ -150,13 +183,13 @@ h4 {
   text-align: left;
 }
 
-hr{
+hr {
   color: #ce6438;
   border: 0;
-    height: 0;
-    box-shadow: 0 0 10px 1px rgb(230, 122, 122);
-    margin-top: 2rem;
-    margin-bottom: 4rem;
+  height: 0;
+  box-shadow: 0 0 10px 1px rgb(230, 122, 122);
+  margin-top: 2rem;
+  margin-bottom: 4rem;
 }
 
 /* brødtekst tekst mobil */
@@ -172,7 +205,7 @@ p {
   background: #d8ccdf;
   color: white;
   border-radius: 0.5rem;
-  box-shadow: 0.1rem 0.1rem rgba(143, 143, 141, 0.26);
+  box-shadow: 3px 3px 7px #c9cccf, -3px -3px 7px #ffffff;
 }
 
 /* sektioner */
@@ -230,6 +263,7 @@ p {
   list-style-type: none;
   transition: transform 0.7s;
   transform-origin: top left;
+  background-color: hsla(323, 16%, 80%, 0.945);
 }
 
 ul {
@@ -237,7 +271,6 @@ ul {
   padding: 0;
   width: 2rem;
   height: 0rem;
-  background-color: hsla(322, 15%, 80%, 0.5);
 }
 
 li a {
@@ -269,17 +302,39 @@ li a {
 
 .grid_containerUX1 {
   display: grid;
-  grid-template-columns: auto;
-  grid-gap: 0.6rem;
-  padding-left: 0.1rem;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  grid-template-rows: auto auto;
+  /* grid-gap: 0.6rem;
+  /* padding-left: 0.1rem;
   padding-left: 0.1rem;
   margin-left: 1rem;
-  margin-right: 1rem;
+  margin-right: 1rem; */
 }
 
-.grid_containerUX1 > div {
+/* .grid_containerUX1 > div {
   text-align: center;
   padding: 0.1rem 0;
+} */
+
+.grid_containerUX1 .element1 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.grid_containerUX1 .element2 {
+  grid-column: 2/4;
+  grid-row: 1/2;
+}
+.grid_containerUX1 .element3 {
+  grid-column: 4/5;
+  grid-row: 1/2;
+}
+.grid_containerUX1 .element4 {
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+.grid_containerUX1 .element5 {
+  grid-column: 3/5;
+  grid-row: 2/3;
 }
 
 .grid_containerUX2 {
@@ -314,62 +369,62 @@ li a {
 
 /* GRUNDLÆGGENDE Animation GRID MOBILE*/
 .grid_containerANI1 {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 0.6rem;
-    padding: 0.1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-
-  .grid_containerANI1 > div {
-    text-align: center;
-    padding: 20px 0;
-  }
-
-  .grid_containerANI2 {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 0.6rem;
-    padding: 0.1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-
-  .grid_containerANI2 > div {
-    text-align: center;
-    padding: 20px 0;
-  }
-   .grid_containerANI3 {
-    display: grid;
-    grid-template-columns: auto;
-    grid-gap: 0.6rem;
-    padding: 0.1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-
-  .grid_containerANI3 > div {
-    text-align: center;
-    padding: 20px 0;
-  }
-  .grid_containerANI4 {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 0.6rem;
-    padding: 0.1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-
-  .grid_containerANI4 > div {
-    text-align: center;
-    padding: 20px 0;
-  }
-
-  .grid_containerANI5 {
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.6rem;
+  padding: 0.1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.grid_containerANI1 > div {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.grid_containerANI2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.6rem;
+  padding: 0.1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.grid_containerANI2 > div {
+  text-align: center;
+  padding: 20px 0;
+}
+.grid_containerANI3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 0.6rem;
+  padding: 0.1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.grid_containerANI3 > div {
+  text-align: center;
+  padding: 20px 0;
+}
+.grid_containerANI4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0.6rem;
+  padding: 0.1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.grid_containerANI4 > div {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.grid_containerANI5 {
+  display: grid;
+  grid-template-columns: 1fr;
   grid-gap: 0.6rem;
   padding-left: 0.1rem;
   padding-left: 0.1rem;
@@ -384,7 +439,7 @@ li a {
 
 .grid_containerANI6 {
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 1fr;
   grid-gap: 0.6rem;
   padding-left: 0.1rem;
   padding-left: 0.1rem;
@@ -399,7 +454,7 @@ li a {
 
 .grid_containerANI7 {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 0.6rem;
   padding-left: 0.1rem;
   padding-left: 0.1rem;
@@ -412,15 +467,62 @@ li a {
   padding: 0.1rem 0;
 }
 
+/* GRUNDLÆGGENDEN INDHOLD MOBIL */
+#first_section_tema5 .section_wrapper {
+  overflow: hidden;
+}
+.grid_containerh2s {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 0.6rem;
+  padding-left: 0.1rem;
+  padding-left: 0.1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.grid_containerh2s > div {
+  text-align: center;
+  padding: 0.1rem 0;
+}
+
+.grid_containerpilot1 {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 0.6rem;
+  padding-left: 0.1rem;
+  padding-left: 0.1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.grid_containerpilot1 > div {
+  text-align: center;
+  padding: 0.1rem 0;
+}
+
+.grid_containerpilot2 {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 0.6rem;
+  padding-left: 0.1rem;
+  padding-left: 0.1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.grid_containerpilot2 > div {
+  text-align: center;
+  padding: 0.1rem 0;
+}
+.grid_containerpilot3 {
+  object-fit: cover;
+  display: flex;
+  aspect-ratio: 16 / 9;
+  max-width: 100vw;
+  margin: 0 auto;
+  justify-content: center;
+}
+
 @media (min-width: 650px) {
-
-   #forsideH1 {
-  font-size: 2.9rem;
-}
-#forsideH2 {
-  font-size: 2rem;
-}
-
   /* GRUNDLÆGGENDE HTML WEBSITE GRID STORSKÆRM */
   .grid_containerweb {
     display: grid;
@@ -436,11 +538,11 @@ li a {
     padding: 20px 0;
   }
 
-/* GRUNDLÆGGENDE UX WEBSITE GRID STORSKÆRM */
- .grid_containerUX1 {
+  /* GRUNDLÆGGENDE UX WEBSITE GRID STORSKÆRM */
+  .grid_containerUX1 {
     display: grid;
     grid-template-columns: repeat(6, fr);
-    grid-template-rows:repeat(2, fr):
+    grid-template-rows: repeat(2, fr);
     grid-gap: 0.6rem;
     /* padding: 0.1rem;
     margin-left: 1rem;
@@ -455,41 +557,42 @@ li a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
+    box-shadow: 3px 3px 7px #c9cccf, -3px -3px 7px #ffffff;
+  }
 
-/* Grid der er lavet specilet til 1 sektion i UX design med 5 billeder */
-.grid_item1 {
+  /* Grid der er lavet specilet til 1 sektion i UX design med 5 billeder */
+  .grid_item1 {
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 1;
     grid-row-end: 1;
-}
-.grid_item2 {
+  }
+  .grid_item2 {
     grid-column-start: 2;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 1;
-}
-.grid_item3 {
+  }
+  .grid_item3 {
     grid-column-start: 3;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 1;
-}
-.grid_item4 {
+  }
+  .grid_item4 {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 2;
-}
-.grid_item5{
+  }
+  .grid_item5 {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 2;
-}
+  }
 
-/* De andre sektioner i UX design storskærm */
+  /* De andre sektioner i UX design storskærm */
   .grid_containerUX2 {
     display: grid;
     grid-template-columns: auto auto;
@@ -532,7 +635,7 @@ li a {
     text-align: center;
     padding: 20px 0;
   }
-.grid_containerANI4 {
+  .grid_containerANI4 {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
     grid-gap: 0.6rem;
@@ -546,67 +649,134 @@ li a {
     padding: 20px 0;
   }
 
+  .grid_containerANI5 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 0.6rem;
+    padding-left: 0.1rem;
+    padding-left: 0.1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 
-.grid_containerANI5 {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 0.6rem;
-  padding-left: 0.1rem;
-  padding-left: 0.1rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
+  .grid_containerANI5 > div {
+    text-align: center;
+    padding: 0.1rem 0;
+  }
 
-.grid_containerANI5 > div {
-  text-align: center;
-  padding: 0.1rem 0;
-}
+  .grid_containerANI6 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 0.6rem;
+    padding-left: 0.1rem;
+    padding-left: 0.1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 
-.grid_containerANI6 {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 0.6rem;
-  padding-left: 0.1rem;
-  padding-left: 0.1rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
+  .grid_containerANI6 > div {
+    text-align: center;
+    padding: 0.1rem 0;
+  }
 
-.grid_containerANI6 > div {
-  text-align: center;
-  padding: 0.1rem 0;
-}
+  .grid_containerANI7 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 0.6rem;
+    padding-left: 0.1rem;
+    padding-left: 0.1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 
-.grid_containerANI7 {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 0.6rem;
-  padding-left: 0.1rem;
-  padding-left: 0.1rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
+  .grid_containerANI7 > div {
+    text-align: center;
+    padding: 0.1rem 0;
+  }
 
-.grid_containerANI7 > div {
-  text-align: center;
-  padding: 0.1rem 0;
-}
+  /* CV design storskærm */
+  .IDEAL,
+  .REIREI,
+  .TUI,
+  .USAtours,
+  .havecenter,
+  .floradanica,
+  .KEA,
+  .NielsBrock {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.6rem;
+    padding-left: 0.1rem;
+    padding-left: 0.1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 
-/* CV design storskærm */
-.IDEAL, .REIREI, .TUI, .USAtours, .havecenter, .floradanica, .KEA, .NielsBrock{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 0.6rem;
-  padding-left: 0.1rem;
-  padding-left: 0.1rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
+  .IDEAL,
+  .REIREI,
+  .TUI,
+  .USAtours,
+  .havecenter,
+  .floradanica,
+  .KEA,
+  .NielsBrock > div {
+    text-align: center;
+    padding: 0.1rem 0;
+  }
+  /* grundlæggende indhold stor skærm */
+  .grid_containerh2s {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 0.6rem;
+    padding: 0.1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 
-.IDEAL, .REIREI, .TUI, .USAtours, .havecenter, .floradanica, .KEA, .NielsBrock > div {
-  text-align: center;
-  padding: 0.1rem 0;
-}
+  .grid_containerh2s > div {
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .grid_containerpilot1 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 0.6rem;
+    padding: 0.1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .grid_containerpilot1 > div {
+    text-align: center;
+    padding: 20px 0;
+  }
+  .grid_containerpilot2 {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 0.6rem;
+    padding: 0.1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .grid_containerpilot2 > div {
+    text-align: center;
+    padding: 20px 0;
+  }
+  .grid_containerpilot3 {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 0.6rem;
+    padding: 0.1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .grid_containerpilot3 > div {
+    text-align: center;
+    padding: 20px 0;
+  }
 }
 
 /* Menulinje der skifter ved større skærm */
@@ -619,7 +789,7 @@ li a {
     transform: translateX(0);
     opacity: 1;
     height: 3rem;
-    background-color: hsla(322, 15%, 80%, 0.5);
+    background-color: hsla(323, 16%, 80%, 0.945);
   }
   #menu li {
     display: inline-block;
@@ -632,7 +802,7 @@ li a {
   header {
     position: sticky;
     top: 0;
-    box-shadow: 0 4px 8px 0 rgba(168, 123, 123, 0.3);
+    box-shadow: 3px 3px 7px #c9cccf, -3px -3px 7px #ffffff;
     z-index: 100;
   }
 
@@ -650,49 +820,49 @@ li a {
   header .logo {
     width: 7%;
   }
-ul {
-  margin: 0;
-  padding: 0;
-  height: 2rem;
-  width: 18rem;
-  /* background-color: #d3c3cd;
+  ul {
+    margin: 0;
+    padding: 0;
+    height: 2rem;
+    width: 18rem;
+    /* background-color: #d3c3cd;
   box-shadow: #d880a8; */
-}
+  }
 
-li a {
-  display: block;
-  color: #e37a74;
-  padding: 8px 16px;
-  text-decoration: none;
-  font-family: "Saira", sans-serif;
-}
+  li a {
+    display: block;
+    color: #e37a74;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-family: "Saira", sans-serif;
+  }
 }
 
 @media (min-width: 1100px) {
-/* h1, h2, h4 der er på forside og cv ved stor skærm */
+  /* h1, h2, h4 der er på forside og cv ved stor skærm */
   #forsideH1 {
-  font-family: "Orbitron", sans-serif;
-  font-size: 4rem;
-  align-self: center;
-  line-height: 1.125;
-  margin-left: 1rem;
-  letter-spacing: 0.4rem;
-  text-align: left;
-  grid-column: 1;
-  grid-row: 1;
-}
-#forsideH2 {
-  font-family: "Orbitron", sans-serif;
-  font-size: 2.5rem;
-  align-self: end;
-  line-height: 1.125;
-  margin: 1rem;
-  letter-spacing: 0.4rem;
-  text-align: left;
-  grid-column: 1;
-  grid-row: 1;
-}
-  
+    font-family: "Orbitron", sans-serif;
+    font-size: 3.5rem;
+    align-self: center;
+    line-height: 1.125;
+    margin-left: 1rem;
+    letter-spacing: 0.4rem;
+    text-align: left;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  #forsideH2 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 2.2rem;
+    align-self: end;
+    line-height: 1.125;
+    margin: 1rem;
+    letter-spacing: 0.4rem;
+    text-align: left;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
   h4 {
     display: grid;
     font-family: "Orbitron", sans-serif;
@@ -706,5 +876,5 @@ li a {
     position: relative;
     grid-column: 2;
     grid-row: 3;
-}
+  }
 }
