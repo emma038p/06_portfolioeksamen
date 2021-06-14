@@ -60,7 +60,7 @@ a {
 /* "OVERSKRIFTER" */
 
 /* mobileversion overskrifte */
-#forsideH1 {
+.forsideH1 {
   font-family: "Orbitron", sans-serif;
   font-size: 2.3rem;
   align-self: center;
@@ -72,7 +72,7 @@ a {
   grid-column: 1;
   grid-row: 1;
 }
-#forsideH2 {
+.forsideH2 {
   font-family: "Orbitron", sans-serif;
   font-size: 1.3rem;
   margin-top: 1rem;
@@ -86,7 +86,7 @@ a {
   grid-row: 1;
 }
 
-#generalH1 {
+.generalH1 {
   font-family: "Orbitron", sans-serif;
   font-size: 2.3rem;
   margin-block-start: 8.67rem;
@@ -97,7 +97,7 @@ a {
   text-align: left;
 }
 
-#generalH2 {
+.generalH2 {
   font-family: "Orbitron", sans-serif;
   font-size: 1.3rem;
   color: #ce6438;
@@ -141,10 +141,10 @@ h4 {
 
 /* H1 og H2 color skifter ved stor skærm */
 @media (min-width: 850px) {
-  #forsideH1 {
+  .forsideH1 {
     color: #ce6438;
   }
-  #forsideH2 {
+  .forsideH2 {
     color: #ce6438;
     margin-top: 1rem;
   }
@@ -152,7 +152,7 @@ h4 {
 
 /* overskrifter til CV siden */
 
-#CVH2 {
+.CVH2 {
   font-family: "Orbitron", sans-serif;
   font-size: 1rem;
   color: #e37a74;
@@ -162,7 +162,7 @@ h4 {
   text-align: left;
   margin-top: 1rem;
 }
-#CVH3 {
+.CVH3 {
   font-family: "Orbitron", sans-serif;
   font-size: 0.7rem;
   color: #eba29b;
@@ -173,7 +173,7 @@ h4 {
   margin-top: 1rem;
 }
 
-#CVH4 {
+.CVH4 {
   font-family: "Orbitron", sans-serif;
   font-size: 0.7rem;
   color: #eba29b;
@@ -193,10 +193,39 @@ hr {
 }
 
 /* brødtekst tekst mobil */
-p {
-  max-width: 90rem;
+.generalP {
+  max-width: 50ch;
+  font-family: “Saira”, sans-serif;
+  column-count: 2;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  text-align: left;
+  margin: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background: #d8ccdf;
+  color: white;
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 7px #c9cccf, -3px -3px 7px #ffffff;
+}
+
+.roledescript {
   font-family: “Saira”, sans-serif;
   font-size: 1rem;
+  line-height: 1.2rem;
+  text-align: left;
+  margin: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background: #d8ccdf;
+  color: white;
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 7px #c9cccf, -3px -3px 7px #ffffff;
+}
+.CVP {
+  font-family: “Saira”, sans-serif;
+  max-width: 70ch;
+  font-size: 1.1rem;
   line-height: 1.2rem;
   text-align: left;
   margin: 1rem;
@@ -264,6 +293,8 @@ p {
   transition: transform 0.7s;
   transform-origin: top left;
   background-color: hsla(323, 16%, 80%, 0.945);
+  position: fixed;
+  z-index: 100;
 }
 
 ul {
@@ -795,6 +826,15 @@ li a {
     display: inline-block;
   }
 
+  #menu {
+    list-style-type: none;
+    transition: transform 0.7s;
+    transform-origin: top left;
+    background-color: hsla(323, 16%, 80%, 0.945);
+    position: ;
+    z-index: ;
+  }
+
   .logo {
     opacity: 1;
   }
@@ -840,7 +880,7 @@ li a {
 
 @media (min-width: 1100px) {
   /* h1, h2, h4 der er på forside og cv ved stor skærm */
-  #forsideH1 {
+  .forsideH1 {
     font-family: "Orbitron", sans-serif;
     font-size: 3.5rem;
     align-self: center;
@@ -851,7 +891,7 @@ li a {
     grid-column: 1;
     grid-row: 1;
   }
-  #forsideH2 {
+  .forsideH2 {
     font-family: "Orbitron", sans-serif;
     font-size: 2.2rem;
     align-self: end;
