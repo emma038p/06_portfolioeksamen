@@ -142,6 +142,10 @@ h4 {
   /* position: relative; */
 }
 
+.lighthouse_section {
+  margin: auto;
+}
+
 /* H1 og H2 color skifter ved stor skærm */
 @media (min-width: 850px) {
   .forsideH1 {
@@ -780,6 +784,11 @@ li a {
     color: #c56198;
     margin-top: 1rem;
     margin-bottom: 1rem;
+  }
+
+  .lighthouse_section {
+    margin: auto;
+    margin-top: 7rem;
   }
 }
 
